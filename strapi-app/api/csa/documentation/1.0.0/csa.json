@@ -545,8 +545,7 @@
               "required": [
                 "id",
                 "name",
-                "description",
-                "created_at"
+                "description"
               ],
               "properties": {
                 "id": {
@@ -558,14 +557,11 @@
                 "description": {
                   "type": "string"
                 },
-                "created_at": {
-                  "type": "string"
-                },
-                "updated_at": {
-                  "type": "string"
-                },
                 "csa": {
-                  "type": "string"
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "variations": {
                   "type": "array",
@@ -613,24 +609,6 @@
                 },
                 "role": {
                   "type": "string"
-                },
-                "topics": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "interested topics": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "answers": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
                 }
               }
             }
@@ -670,20 +648,27 @@
                 },
                 "role": {
                   "type": "string"
+                }
+              }
+            }
+          },
+          "comissions": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
                 },
-                "topics": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                "name": {
+                  "type": "string"
                 },
-                "interested topics": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                "csa": {
+                  "type": "string"
                 },
-                "answers": {
+                "users": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -734,6 +719,12 @@
             }
           },
           "cofarmers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "comissions": {
             "type": "array",
             "items": {
               "type": "string"

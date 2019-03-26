@@ -512,8 +512,7 @@
         "required": [
           "id",
           "name",
-          "description",
-          "created_at"
+          "description"
         ],
         "properties": {
           "id": {
@@ -527,56 +526,57 @@
             "type": "string",
             "default": ""
           },
-          "created_at": {
-            "type": "string",
-            "default": ""
-          },
-          "updated_at": {
-            "type": "string",
-            "default": ""
-          },
           "csa": {
-            "required": [
-              "id",
-              "name",
-              "description",
-              "created_at"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "localPoint": {
-                "type": "string"
-              },
-              "created_at": {
-                "type": "string"
-              },
-              "updated_at": {
-                "type": "string"
-              },
-              "routines": {
-                "type": "array",
-                "items": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "description",
+                "created_at"
+              ],
+              "properties": {
+                "id": {
                   "type": "string"
-                }
-              },
-              "farmers": {
-                "type": "array",
-                "items": {
+                },
+                "name": {
                   "type": "string"
-                }
-              },
-              "cofarmers": {
-                "type": "array",
-                "items": {
+                },
+                "description": {
                   "type": "string"
+                },
+                "localPoint": {
+                  "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "routines": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "farmers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "cofarmers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "comissions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -621,8 +621,7 @@
               "required": [
                 "id",
                 "title",
-                "description",
-                "created at"
+                "description"
               ],
               "properties": {
                 "id": {
@@ -634,34 +633,22 @@
                 "description": {
                   "type": "string"
                 },
-                "creator farmer": {
-                  "type": "string"
-                },
-                "creator cofarmer": {
-                  "type": "string"
-                },
-                "routine": {
-                  "type": "string"
-                },
-                "created at": {
-                  "type": "string"
-                },
-                "updated at": {
-                  "type": "string"
-                },
-                "interested cofarmers": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "interested farmers": {
+                "routines": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
                 "answers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "creator": {
+                  "type": "string"
+                },
+                "interestedUsers": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -675,8 +662,7 @@
       "NewRoutine": {
         "required": [
           "name",
-          "description",
-          "created_at"
+          "description"
         ],
         "properties": {
           "name": {
@@ -687,16 +673,11 @@
             "type": "string",
             "default": ""
           },
-          "created_at": {
-            "type": "string",
-            "default": ""
-          },
-          "updated_at": {
-            "type": "string",
-            "default": ""
-          },
           "csa": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "variations": {
             "type": "array",

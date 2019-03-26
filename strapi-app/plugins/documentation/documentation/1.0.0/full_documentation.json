@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "03/22/2019 1:24:42 AM"
+    "x-generation-date": "03/25/2019 8:25:19 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -1039,6 +1039,511 @@
         "summary": "",
         "tags": [
           "Cofarmer"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/comissions": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Comission"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Comission"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array"
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Comission"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Comission"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewComission"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/comissions/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Comission"
+        ],
+        "parameters": []
+      }
+    },
+    "/comissions/{_id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Comission"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Comission"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Comission"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Comission"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewComission"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a record",
+        "responses": {
+          "200": {
+            "description": "deletes a single record based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Comission"
         ],
         "parameters": [
           {
@@ -5648,8 +6153,7 @@
             "required": [
               "id",
               "title",
-              "description",
-              "created at"
+              "description"
             ],
             "properties": {
               "id": {
@@ -5661,28 +6165,7 @@
               "description": {
                 "type": "string"
               },
-              "creator farmer": {
-                "type": "string"
-              },
-              "creator cofarmer": {
-                "type": "string"
-              },
-              "routine": {
-                "type": "string"
-              },
-              "created at": {
-                "type": "string"
-              },
-              "updated at": {
-                "type": "string"
-              },
-              "interested cofarmers": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "interested farmers": {
+              "routines": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -5693,106 +6176,11 @@
                 "items": {
                   "type": "string"
                 }
-              }
-            }
-          },
-          "creator cofarmer": {
-            "required": [
-              "id",
-              "name",
-              "lastname",
-              "created_at",
-              "email",
-              "password"
-            ],
-            "properties": {
-              "id": {
+              },
+              "creator": {
                 "type": "string"
               },
-              "name": {
-                "type": "string"
-              },
-              "lastname": {
-                "type": "string"
-              },
-              "created_at": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "csa": {
-                "type": "string"
-              },
-              "role": {
-                "type": "string"
-              },
-              "topics": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "interested topics": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "answers": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "creator farmer": {
-            "required": [
-              "id",
-              "name",
-              "lastname",
-              "email",
-              "password"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "lastname": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "csa": {
-                "type": "string"
-              },
-              "role": {
-                "type": "string"
-              },
-              "topics": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "interested topics": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "answers": {
+              "interestedUsers": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -5804,13 +6192,79 @@
             "type": "string",
             "default": ""
           },
-          "created_at": {
-            "type": "string",
-            "default": ""
-          },
-          "updated_at": {
-            "type": "string",
-            "default": ""
+          "user": {
+            "required": [
+              "id",
+              "username",
+              "email",
+              "firstname",
+              "lastname"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "firstname": {
+                "type": "string"
+              },
+              "lastname": {
+                "type": "string"
+              },
+              "variations": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "comissions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "createdTopics": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "interestedTopics": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "answers": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -5822,23 +6276,12 @@
           "topic": {
             "type": "string"
           },
-          "creator cofarmer": {
-            "type": "string"
-          },
-          "creator farmer": {
-            "type": "string"
-          },
           "message": {
             "type": "string",
             "default": ""
           },
-          "created_at": {
-            "type": "string",
-            "default": ""
-          },
-          "updated_at": {
-            "type": "string",
-            "default": ""
+          "user": {
+            "type": "string"
           }
         }
       },
@@ -5918,6 +6361,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "comissions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -5948,148 +6397,6 @@
               "users": {
                 "type": "array",
                 "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "topics": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "title",
-                "description",
-                "created at"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "creator farmer": {
-                  "type": "string"
-                },
-                "creator cofarmer": {
-                  "type": "string"
-                },
-                "routine": {
-                  "type": "string"
-                },
-                "created at": {
-                  "type": "string"
-                },
-                "updated at": {
-                  "type": "string"
-                },
-                "interested cofarmers": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "interested farmers": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "answers": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "interested topics": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "title",
-                "description",
-                "created at"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "creator farmer": {
-                  "type": "string"
-                },
-                "creator cofarmer": {
-                  "type": "string"
-                },
-                "routine": {
-                  "type": "string"
-                },
-                "created at": {
-                  "type": "string"
-                },
-                "updated at": {
-                  "type": "string"
-                },
-                "interested cofarmers": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "interested farmers": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "answers": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "answers": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "message"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "topic": {
-                  "type": "string"
-                },
-                "creator cofarmer": {
-                  "type": "string"
-                },
-                "creator farmer": {
-                  "type": "string"
-                },
-                "message": {
-                  "type": "string"
-                },
-                "created_at": {
-                  "type": "string"
-                },
-                "updated_at": {
                   "type": "string"
                 }
               }
@@ -6131,20 +6438,162 @@
           },
           "role": {
             "type": "string"
+          }
+        }
+      },
+      "Comission": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
           },
-          "topics": {
-            "type": "array",
-            "items": {
-              "type": "string"
+          "name": {
+            "type": "string",
+            "default": ""
+          },
+          "csa": {
+            "required": [
+              "id",
+              "name",
+              "description",
+              "created_at"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "localPoint": {
+                "type": "string"
+              },
+              "created_at": {
+                "type": "string"
+              },
+              "updated_at": {
+                "type": "string"
+              },
+              "routines": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "farmers": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "cofarmers": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "comissions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
             }
           },
-          "interested topics": {
+          "users": {
             "type": "array",
             "items": {
-              "type": "string"
+              "required": [
+                "id",
+                "username",
+                "email",
+                "firstname",
+                "lastname"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "username": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                },
+                "resetPasswordToken": {
+                  "type": "string"
+                },
+                "confirmed": {
+                  "type": "boolean"
+                },
+                "blocked": {
+                  "type": "boolean"
+                },
+                "role": {
+                  "type": "string"
+                },
+                "firstname": {
+                  "type": "string"
+                },
+                "lastname": {
+                  "type": "string"
+                },
+                "variations": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "comissions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "createdTopics": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "interestedTopics": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "answers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
             }
+          }
+        }
+      },
+      "NewComission": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "default": ""
           },
-          "answers": {
+          "csa": {
+            "type": "string"
+          },
+          "users": {
             "type": "array",
             "items": {
               "type": "string"
@@ -6189,8 +6638,7 @@
               "required": [
                 "id",
                 "name",
-                "description",
-                "created_at"
+                "description"
               ],
               "properties": {
                 "id": {
@@ -6202,14 +6650,11 @@
                 "description": {
                   "type": "string"
                 },
-                "created_at": {
-                  "type": "string"
-                },
-                "updated_at": {
-                  "type": "string"
-                },
                 "csa": {
-                  "type": "string"
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "variations": {
                   "type": "array",
@@ -6257,24 +6702,6 @@
                 },
                 "role": {
                   "type": "string"
-                },
-                "topics": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "interested topics": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "answers": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
                 }
               }
             }
@@ -6314,20 +6741,27 @@
                 },
                 "role": {
                   "type": "string"
+                }
+              }
+            }
+          },
+          "comissions": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
                 },
-                "topics": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                "name": {
+                  "type": "string"
                 },
-                "interested topics": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                "csa": {
+                  "type": "string"
                 },
-                "answers": {
+                "users": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -6378,6 +6812,12 @@
             }
           },
           "cofarmers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "comissions": {
             "type": "array",
             "items": {
               "type": "string"
@@ -6456,6 +6896,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "comissions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -6486,148 +6932,6 @@
               "users": {
                 "type": "array",
                 "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "topics": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "title",
-                "description",
-                "created at"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "creator farmer": {
-                  "type": "string"
-                },
-                "creator cofarmer": {
-                  "type": "string"
-                },
-                "routine": {
-                  "type": "string"
-                },
-                "created at": {
-                  "type": "string"
-                },
-                "updated at": {
-                  "type": "string"
-                },
-                "interested cofarmers": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "interested farmers": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "answers": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "interested topics": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "title",
-                "description",
-                "created at"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "creator farmer": {
-                  "type": "string"
-                },
-                "creator cofarmer": {
-                  "type": "string"
-                },
-                "routine": {
-                  "type": "string"
-                },
-                "created at": {
-                  "type": "string"
-                },
-                "updated at": {
-                  "type": "string"
-                },
-                "interested cofarmers": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "interested farmers": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "answers": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "answers": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "message"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "topic": {
-                  "type": "string"
-                },
-                "creator cofarmer": {
-                  "type": "string"
-                },
-                "creator farmer": {
-                  "type": "string"
-                },
-                "message": {
-                  "type": "string"
-                },
-                "created_at": {
-                  "type": "string"
-                },
-                "updated_at": {
                   "type": "string"
                 }
               }
@@ -6664,24 +6968,6 @@
           },
           "role": {
             "type": "string"
-          },
-          "topics": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "interested topics": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "answers": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           }
         }
       },
@@ -6689,8 +6975,7 @@
         "required": [
           "id",
           "name",
-          "description",
-          "created_at"
+          "description"
         ],
         "properties": {
           "id": {
@@ -6704,56 +6989,57 @@
             "type": "string",
             "default": ""
           },
-          "created_at": {
-            "type": "string",
-            "default": ""
-          },
-          "updated_at": {
-            "type": "string",
-            "default": ""
-          },
           "csa": {
-            "required": [
-              "id",
-              "name",
-              "description",
-              "created_at"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "localPoint": {
-                "type": "string"
-              },
-              "created_at": {
-                "type": "string"
-              },
-              "updated_at": {
-                "type": "string"
-              },
-              "routines": {
-                "type": "array",
-                "items": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "description",
+                "created_at"
+              ],
+              "properties": {
+                "id": {
                   "type": "string"
-                }
-              },
-              "farmers": {
-                "type": "array",
-                "items": {
+                },
+                "name": {
                   "type": "string"
-                }
-              },
-              "cofarmers": {
-                "type": "array",
-                "items": {
+                },
+                "description": {
                   "type": "string"
+                },
+                "localPoint": {
+                  "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "routines": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "farmers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "cofarmers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "comissions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -6798,8 +7084,7 @@
               "required": [
                 "id",
                 "title",
-                "description",
-                "created at"
+                "description"
               ],
               "properties": {
                 "id": {
@@ -6811,34 +7096,22 @@
                 "description": {
                   "type": "string"
                 },
-                "creator farmer": {
-                  "type": "string"
-                },
-                "creator cofarmer": {
-                  "type": "string"
-                },
-                "routine": {
-                  "type": "string"
-                },
-                "created at": {
-                  "type": "string"
-                },
-                "updated at": {
-                  "type": "string"
-                },
-                "interested cofarmers": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "interested farmers": {
+                "routines": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
                 "answers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "creator": {
+                  "type": "string"
+                },
+                "interestedUsers": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -6852,8 +7125,7 @@
       "NewRoutine": {
         "required": [
           "name",
-          "description",
-          "created_at"
+          "description"
         ],
         "properties": {
           "name": {
@@ -6864,16 +7136,11 @@
             "type": "string",
             "default": ""
           },
-          "created_at": {
-            "type": "string",
-            "default": ""
-          },
-          "updated_at": {
-            "type": "string",
-            "default": ""
-          },
           "csa": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "variations": {
             "type": "array",
@@ -6893,8 +7160,7 @@
         "required": [
           "id",
           "title",
-          "description",
-          "created at"
+          "description"
         ],
         "properties": {
           "id": {
@@ -6908,168 +7174,13 @@
             "type": "string",
             "default": ""
           },
-          "creator farmer": {
-            "required": [
-              "id",
-              "name",
-              "lastname",
-              "email",
-              "password"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "lastname": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "csa": {
-                "type": "string"
-              },
-              "role": {
-                "type": "string"
-              },
-              "topics": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "interested topics": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "answers": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "creator cofarmer": {
-            "required": [
-              "id",
-              "name",
-              "lastname",
-              "created_at",
-              "email",
-              "password"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "lastname": {
-                "type": "string"
-              },
-              "created_at": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "csa": {
-                "type": "string"
-              },
-              "role": {
-                "type": "string"
-              },
-              "topics": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "interested topics": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "answers": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "routine": {
-            "required": [
-              "id",
-              "name",
-              "description",
-              "created_at"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "created_at": {
-                "type": "string"
-              },
-              "updated_at": {
-                "type": "string"
-              },
-              "csa": {
-                "type": "string"
-              },
-              "variations": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "topics": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "created at": {
-            "type": "string",
-            "default": ""
-          },
-          "updated at": {
-            "type": "string",
-            "default": ""
-          },
-          "interested cofarmers": {
+          "routines": {
             "type": "array",
             "items": {
               "required": [
                 "id",
                 "name",
-                "lastname",
-                "created_at",
-                "email",
-                "password"
+                "description"
               ],
               "properties": {
                 "id": {
@@ -7078,90 +7189,22 @@
                 "name": {
                   "type": "string"
                 },
-                "lastname": {
-                  "type": "string"
-                },
-                "created_at": {
-                  "type": "string"
-                },
-                "email": {
-                  "type": "string"
-                },
-                "password": {
+                "description": {
                   "type": "string"
                 },
                 "csa": {
-                  "type": "string"
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
-                "role": {
-                  "type": "string"
+                "variations": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "topics": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "interested topics": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "answers": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "interested farmers": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "lastname",
-                "email",
-                "password"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "lastname": {
-                  "type": "string"
-                },
-                "email": {
-                  "type": "string"
-                },
-                "password": {
-                  "type": "string"
-                },
-                "csa": {
-                  "type": "string"
-                },
-                "role": {
-                  "type": "string"
-                },
-                "topics": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "interested topics": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "answers": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -7184,20 +7227,162 @@
                 "topic": {
                   "type": "string"
                 },
-                "creator cofarmer": {
-                  "type": "string"
-                },
-                "creator farmer": {
-                  "type": "string"
-                },
                 "message": {
                   "type": "string"
                 },
-                "created_at": {
+                "user": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "creator": {
+            "required": [
+              "id",
+              "username",
+              "email",
+              "firstname",
+              "lastname"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "firstname": {
+                "type": "string"
+              },
+              "lastname": {
+                "type": "string"
+              },
+              "variations": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "comissions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "createdTopics": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "interestedTopics": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "answers": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "interestedUsers": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "username",
+                "email",
+                "firstname",
+                "lastname"
+              ],
+              "properties": {
+                "id": {
                   "type": "string"
                 },
-                "updated_at": {
+                "username": {
                   "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                },
+                "resetPasswordToken": {
+                  "type": "string"
+                },
+                "confirmed": {
+                  "type": "boolean"
+                },
+                "blocked": {
+                  "type": "boolean"
+                },
+                "role": {
+                  "type": "string"
+                },
+                "firstname": {
+                  "type": "string"
+                },
+                "lastname": {
+                  "type": "string"
+                },
+                "variations": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "comissions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "createdTopics": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "interestedTopics": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "answers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -7207,8 +7392,7 @@
       "NewTopic": {
         "required": [
           "title",
-          "description",
-          "created at"
+          "description"
         ],
         "properties": {
           "title": {
@@ -7219,36 +7403,22 @@
             "type": "string",
             "default": ""
           },
-          "creator farmer": {
-            "type": "string"
-          },
-          "creator cofarmer": {
-            "type": "string"
-          },
-          "routine": {
-            "type": "string"
-          },
-          "created at": {
-            "type": "string",
-            "default": ""
-          },
-          "updated at": {
-            "type": "string",
-            "default": ""
-          },
-          "interested cofarmers": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "interested farmers": {
+          "routines": {
             "type": "array",
             "items": {
               "type": "string"
             }
           },
           "answers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "creator": {
+            "type": "string"
+          },
+          "interestedUsers": {
             "type": "array",
             "items": {
               "type": "string"
@@ -7279,8 +7449,7 @@
             "required": [
               "id",
               "name",
-              "description",
-              "created_at"
+              "description"
             ],
             "properties": {
               "id": {
@@ -7292,14 +7461,11 @@
               "description": {
                 "type": "string"
               },
-              "created_at": {
-                "type": "string"
-              },
-              "updated_at": {
-                "type": "string"
-              },
               "csa": {
-                "type": "string"
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "variations": {
                 "type": "array",
@@ -7358,6 +7524,30 @@
                 "type": "string"
               },
               "variations": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "comissions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "createdTopics": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "interestedTopics": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "answers": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -7549,6 +7739,30 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "comissions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "createdTopics": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "interestedTopics": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "answers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -7688,6 +7902,138 @@
                 }
               }
             }
+          },
+          "comissions": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "csa": {
+                  "type": "string"
+                },
+                "users": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "createdTopics": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "title",
+                "description"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "routines": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "answers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "creator": {
+                  "type": "string"
+                },
+                "interestedUsers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "interestedTopics": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "title",
+                "description"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "routines": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "answers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "creator": {
+                  "type": "string"
+                },
+                "interestedUsers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "answers": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "message"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "topic": {
+                  "type": "string"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -7741,6 +8087,30 @@
             "items": {
               "type": "string"
             }
+          },
+          "comissions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "createdTopics": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "interestedTopics": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "answers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       },
@@ -7784,6 +8154,9 @@
     },
     {
       "name": "Cofarmer"
+    },
+    {
+      "name": "Comission"
     },
     {
       "name": "Csa"
