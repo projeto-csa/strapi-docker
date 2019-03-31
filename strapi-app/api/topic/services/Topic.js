@@ -32,7 +32,11 @@ module.exports = {
       .sort(filters.sort)
       .skip(filters.start)
       .limit(filters.limit)
-      .populate(filters.populate || populate);
+      .populate(filters.populate || populate)
+      .populate({
+        path: 'respostas',
+        populate: {path: 'user'}
+      })
   },
 
   /**
@@ -50,7 +54,11 @@ module.exports = {
 
     return Topic
       .findOne(_.pick(params, _.keys(Topic.schema.paths)))
-      .populate(populate);
+      .populate(populate)
+      .populate({
+        path: 'answers',
+        populate: {path: 'user'}
+      })
   },
 
   /**
