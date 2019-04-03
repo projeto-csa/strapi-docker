@@ -1,5 +1,7 @@
 'use strict';
 
+const sendMail = require('../../../helpers/sendMail');
+
 /**
  * Answer.js controller
  *
@@ -53,7 +55,39 @@ module.exports = {
    */
 
   create: async (ctx) => {
-    return strapi.services.answer.add(ctx.request.body);
+    const result = await strapi.services.answer.add(ctx.request.body);
+    
+    // send email to creator and interested users
+    
+    // const user = await strapi
+    //   .plugins['users-permissions']
+    //   .services
+    //   .user
+    //   .fetch(result.topic.creator);
+    
+    const topic = await strapi.services.topic.fetch(result.topic);
+    const creatorEmail = topic.creator.email;
+    
+    sendMail({
+      to: creatorEmail,
+      subject: 'Nova resposta ao seu tópico',
+      text: 'Alguém respondeu a um tópico que você criou!'
+    });
+
+    const interestedEmails = topic.interestedUsers.map(function (user) {
+      return user.email;
+    });
+    
+    interestedEmails.push('fgdutr@gmail.com');
+    interestedEmails.push('guidodutra@gmail.com');
+
+    sendMail({
+      to: interestedEmails,
+      subject: 'Nova resposta a um tópico de interesse',
+      text: 'Álguém respondeu a um tópico no qual você está interessado!'
+    });
+
+    return result;
   },
 
   /**

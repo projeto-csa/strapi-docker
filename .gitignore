@@ -1,2 +1,3 @@
 /db
 /strapi-app/config/locales
+.env

@@ -20,6 +20,8 @@
   },
   "dependencies": {
     "lodash": "^4.17.5",
+    "nodemailer": "^6.0.0",
+    "nodemailer-sendgrid-transport": "^0.2.0",
     "strapi": "3.0.0-alpha.24.1",
     "strapi-hook-mongoose": "3.0.0-alpha.24.1"
   },
