@@ -512,8 +512,7 @@
         "required": [
           "id",
           "name",
-          "description",
-          "created_at"
+          "description"
         ],
         "properties": {
           "id": {
@@ -530,127 +529,6 @@
           "localPoint": {
             "type": "string",
             "default": ""
-          },
-          "created_at": {
-            "type": "string",
-            "default": ""
-          },
-          "updated_at": {
-            "type": "string",
-            "default": ""
-          },
-          "routines": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "description"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "csa": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "variations": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "topics": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "farmers": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "lastname",
-                "email",
-                "password"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "lastname": {
-                  "type": "string"
-                },
-                "email": {
-                  "type": "string"
-                },
-                "password": {
-                  "type": "string"
-                },
-                "csa": {
-                  "type": "string"
-                },
-                "role": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "cofarmers": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "lastname",
-                "created_at",
-                "email",
-                "password"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "lastname": {
-                  "type": "string"
-                },
-                "created_at": {
-                  "type": "string"
-                },
-                "email": {
-                  "type": "string"
-                },
-                "password": {
-                  "type": "string"
-                },
-                "csa": {
-                  "type": "string"
-                },
-                "role": {
-                  "type": "string"
-                }
-              }
-            }
           },
           "comissions": {
             "type": "array",
@@ -673,6 +551,120 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "description": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "users": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "username",
+                "email"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "username": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                },
+                "resetPasswordToken": {
+                  "type": "string"
+                },
+                "confirmed": {
+                  "type": "boolean"
+                },
+                "blocked": {
+                  "type": "boolean"
+                },
+                "role": {
+                  "type": "string"
+                },
+                "firstname": {
+                  "type": "string"
+                },
+                "lastname": {
+                  "type": "string"
+                },
+                "variations": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "comissions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "createdTopics": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "interestedTopics": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "answers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "csa": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "variations": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "description"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "routine": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "string"
+                },
+                "csas": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -682,8 +674,7 @@
       "NewCsa": {
         "required": [
           "name",
-          "description",
-          "created_at"
+          "description"
         ],
         "properties": {
           "name": {
@@ -698,33 +689,19 @@
             "type": "string",
             "default": ""
           },
-          "created_at": {
-            "type": "string",
-            "default": ""
-          },
-          "updated_at": {
-            "type": "string",
-            "default": ""
-          },
-          "routines": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "farmers": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "cofarmers": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "comissions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "users": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "variations": {
             "type": "array",
             "items": {
               "type": "string"

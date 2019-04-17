@@ -23,30 +23,19 @@
       "default": "",
       "type": "string"
     },
-    "created_at": {
-      "default": "",
-      "type": "date",
-      "required": true
-    },
-    "updated_at": {
-      "default": "",
-      "type": "date"
-    },
-    "routines": {
-      "collection": "routine",
-      "via": "csa"
-    },
-    "farmers": {
-      "collection": "farmer",
-      "via": "csa"
-    },
-    "cofarmers": {
-      "collection": "cofarmer",
-      "via": "csa"
-    },
     "comissions": {
       "collection": "comission",
       "via": "csa"
+    },
+    "users": {
+      "collection": "user",
+      "via": "csa",
+      "plugin": "users-permissions"
+    },
+    "variations": {
+      "collection": "variation",
+      "dominant": true,
+      "via": "csas"
     }
   }
 }

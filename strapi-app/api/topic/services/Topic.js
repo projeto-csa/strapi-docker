@@ -34,7 +34,7 @@ module.exports = {
       .limit(filters.limit)
       .populate(filters.populate || populate)
       .populate({
-        path: 'respostas',
+        path: 'answers',
         populate: {path: 'user'}
       })
   },

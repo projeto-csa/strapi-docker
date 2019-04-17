@@ -50,7 +50,11 @@ module.exports = {
 
     return Csa
       .findOne(_.pick(params, _.keys(Csa.schema.paths)))
-      .populate(populate);
+      .populate(populate)
+      .populate({
+        path: 'variations',
+        populate: {path: 'routine'}
+      });
   },
 
   /**

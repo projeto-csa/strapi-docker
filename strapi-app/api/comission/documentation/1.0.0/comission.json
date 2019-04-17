@@ -524,8 +524,7 @@
             "required": [
               "id",
               "name",
-              "description",
-              "created_at"
+              "description"
             ],
             "properties": {
               "id": {
@@ -540,31 +539,19 @@
               "localPoint": {
                 "type": "string"
               },
-              "created_at": {
-                "type": "string"
-              },
-              "updated_at": {
-                "type": "string"
-              },
-              "routines": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "farmers": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "cofarmers": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "comissions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "users": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "variations": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -578,9 +565,7 @@
               "required": [
                 "id",
                 "username",
-                "email",
-                "firstname",
-                "lastname"
+                "email"
               ],
               "properties": {
                 "id": {
@@ -645,9 +630,16 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "csa": {
+                  "type": "string"
                 }
               }
             }
+          },
+          "description": {
+            "type": "string",
+            "default": ""
           }
         }
       },
@@ -665,6 +657,10 @@
             "items": {
               "type": "string"
             }
+          },
+          "description": {
+            "type": "string",
+            "default": ""
           }
         }
       }

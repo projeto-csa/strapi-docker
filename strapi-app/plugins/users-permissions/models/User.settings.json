@@ -52,12 +52,12 @@
     "firstname": {
       "default": "",
       "type": "string",
-      "required": true
+      "required": false
     },
     "lastname": {
       "default": "",
       "type": "string",
-      "required": true
+      "required": false
     },
     "variations": {
       "collection": "variation",
@@ -79,6 +79,10 @@
     "answers": {
       "collection": "answer",
       "via": "user"
+    },
+    "csa": {
+      "model": "csa",
+      "via": "users"
     }
   },
   "collectionName": "users-permissions_user"

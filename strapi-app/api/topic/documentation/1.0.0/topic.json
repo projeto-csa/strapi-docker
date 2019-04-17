@@ -544,12 +544,6 @@
                 "description": {
                   "type": "string"
                 },
-                "csa": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "variations": {
                   "type": "array",
                   "items": {
@@ -592,9 +586,7 @@
             "required": [
               "id",
               "username",
-              "email",
-              "firstname",
-              "lastname"
+              "email"
             ],
             "properties": {
               "id": {
@@ -659,6 +651,9 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "csa": {
+                "type": "string"
               }
             }
           },
@@ -668,9 +663,7 @@
               "required": [
                 "id",
                 "username",
-                "email",
-                "firstname",
-                "lastname"
+                "email"
               ],
               "properties": {
                 "id": {
@@ -735,6 +728,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "csa": {
+                  "type": "string"
                 }
               }
             }

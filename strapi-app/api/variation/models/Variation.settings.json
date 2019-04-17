@@ -1,6 +1,6 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "variation",
   "info": {
     "name": "variation",
     "description": ""
@@ -30,14 +30,9 @@
       "dominant": true,
       "plugin": "users-permissions"
     },
-    "created_at": {
-      "default": "",
-      "type": "date",
-      "required": true
-    },
-    "updated_at": {
-      "default": "",
-      "type": "date"
+    "csas": {
+      "collection": "csa",
+      "via": "variations"
     }
   }
 }

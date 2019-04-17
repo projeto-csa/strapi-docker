@@ -19,11 +19,6 @@
       "type": "string",
       "required": true
     },
-    "csa": {
-      "collection": "csa",
-      "via": "routines",
-      "dominant": true
-    },
     "variations": {
       "collection": "variation",
       "via": "routine"

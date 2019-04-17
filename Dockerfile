@@ -11,8 +11,9 @@ LABEL maintainer="Luca Perret <perret.luca@gmail.com>" \
 
 WORKDIR /usr/src/api
 
+RUN apk update && apk add bash
 RUN echo "unsafe-perm = true" >> ~/.npmrc
-RUN npm install -g strapi@3.0.0-alpha.25
+RUN npm install -g strapi@alpha
 
 COPY strapi.sh ./
 RUN chmod +x ./strapi.sh
