@@ -578,9 +578,7 @@
               "required": [
                 "id",
                 "username",
-                "email",
-                "firstname",
-                "lastname"
+                "email"
               ],
               "properties": {
                 "id": {

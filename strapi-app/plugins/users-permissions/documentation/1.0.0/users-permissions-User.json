@@ -1105,9 +1105,7 @@
         "required": [
           "id",
           "username",
-          "email",
-          "firstname",
-          "lastname"
+          "email"
         ],
         "properties": {
           "id": {
@@ -1343,9 +1341,7 @@
       "NewUsers-PermissionsUser": {
         "required": [
           "username",
-          "email",
-          "firstname",
-          "lastname"
+          "email"
         ],
         "properties": {
           "username": {

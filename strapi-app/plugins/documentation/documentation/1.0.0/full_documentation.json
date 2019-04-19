@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "03/25/2019 8:25:19 PM"
+    "x-generation-date": "04/19/2019 7:30:26 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -6196,9 +6196,7 @@
             "required": [
               "id",
               "username",
-              "email",
-              "firstname",
-              "lastname"
+              "email"
             ],
             "properties": {
               "id": {
@@ -6511,9 +6509,7 @@
               "required": [
                 "id",
                 "username",
-                "email",
-                "firstname",
-                "lastname"
+                "email"
               ],
               "properties": {
                 "id": {
@@ -7240,9 +7236,7 @@
             "required": [
               "id",
               "username",
-              "email",
-              "firstname",
-              "lastname"
+              "email"
             ],
             "properties": {
               "id": {
@@ -7316,9 +7310,7 @@
               "required": [
                 "id",
                 "username",
-                "email",
-                "firstname",
-                "lastname"
+                "email"
               ],
               "properties": {
                 "id": {
@@ -7485,9 +7477,7 @@
             "required": [
               "id",
               "username",
-              "email",
-              "firstname",
-              "lastname"
+              "email"
             ],
             "properties": {
               "id": {
@@ -7696,9 +7686,7 @@
               "required": [
                 "id",
                 "username",
-                "email",
-                "firstname",
-                "lastname"
+                "email"
               ],
               "properties": {
                 "id": {
@@ -7802,9 +7790,7 @@
         "required": [
           "id",
           "username",
-          "email",
-          "firstname",
-          "lastname"
+          "email"
         ],
         "properties": {
           "id": {
@@ -8040,9 +8026,7 @@
       "NewUsers-PermissionsUser": {
         "required": [
           "username",
-          "email",
-          "firstname",
-          "lastname"
+          "email"
         ],
         "properties": {
           "username": {

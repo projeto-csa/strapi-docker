@@ -77,9 +77,6 @@ module.exports = {
     const interestedEmails = topic.interestedUsers.map(function (user) {
       return user.email;
     });
-    
-    interestedEmails.push('fgdutr@gmail.com');
-    interestedEmails.push('guidodutra@gmail.com');
 
     sendMail({
       to: interestedEmails,

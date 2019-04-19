@@ -52,12 +52,12 @@
     "firstname": {
       "default": "",
       "type": "string",
-      "required": true
+      "required": false
     },
     "lastname": {
       "default": "",
       "type": "string",
-      "required": true
+      "required": false
     },
     "variations": {
       "collection": "variation",
