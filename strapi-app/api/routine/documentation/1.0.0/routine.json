@@ -526,69 +526,13 @@
             "type": "string",
             "default": ""
           },
-          "csa": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "description",
-                "created_at"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "localPoint": {
-                  "type": "string"
-                },
-                "created_at": {
-                  "type": "string"
-                },
-                "updated_at": {
-                  "type": "string"
-                },
-                "routines": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "farmers": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "cofarmers": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "comissions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
           "variations": {
             "type": "array",
             "items": {
               "required": [
                 "id",
                 "name",
-                "description",
-                "created_at"
+                "description"
               ],
               "properties": {
                 "id": {
@@ -606,11 +550,11 @@
                 "user": {
                   "type": "string"
                 },
-                "created_at": {
-                  "type": "string"
-                },
-                "updated_at": {
-                  "type": "string"
+                "csas": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -672,12 +616,6 @@
           "description": {
             "type": "string",
             "default": ""
-          },
-          "csa": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           },
           "variations": {
             "type": "array",

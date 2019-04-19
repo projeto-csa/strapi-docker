@@ -79,6 +79,10 @@
     "answers": {
       "collection": "answer",
       "via": "user"
+    },
+    "csa": {
+      "model": "csa",
+      "via": "users"
     }
   },
   "collectionName": "users-permissions_user"

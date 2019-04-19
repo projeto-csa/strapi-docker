@@ -50,7 +50,11 @@ module.exports = {
 
     return Csa
       .findOne(_.pick(params, _.keys(Csa.schema.paths)))
-      .populate(populate);
+      .populate(populate)
+      .populate({
+        path: 'variations',
+        populate: {path: 'routine'}
+      });
   },
 
   /**
@@ -93,15 +97,42 @@ module.exports = {
    */
 
   edit: async (params, values) => {
+    //params contains id, values contains payload
+
     // Extract values related to relational data.
+    // relational only { field1: relation|[relation1, ...], field2: relation|[relation1, ...], ...}
     const relations = _.pick(values, Csa.associations.map(a => a.alias));
+    // non relational only { field1: value1, field1: value2, ... }
     const data = _.omit(values, Csa.associations.map(a => a.alias));
 
     // Update entry with no-relational data.
+    // entry contains operation result log. (metainformation)
     const entry = await Csa.updateOne(params, data, { multi: true });
 
     // Update relational data and return the entry.
-    return Csa.updateRelations(Object.assign(params, { values: relations }));
+    // returns a promise to entry
+    // Object.assign(params, { values: relations }) creates:
+    // { _id: 231.., values: {...}}
+    const response = await Csa.updateRelations(Object.assign(params, { values: relations }))
+
+    // Duplicated code from fetch.
+    // return previously was:
+    //  return Csa.updateRelations(Object.assign(params, { values: relations }))
+    // Couldn't populate values from Csa.updateRelations()
+    // work-around: await updateRelations to query value
+    // Select field to populate.
+    const populate = Csa.associations
+      .filter(ast => ast.autoPopulate !== false)
+      .map(ast => ast.alias)
+      .join(' ');
+
+    return Csa
+      .findOne(_.pick(params, _.keys(Csa.schema.paths)))
+      .populate(populate)
+      .populate({
+        path: 'variations',
+        populate: {path: 'routine'}
+      });
   },
 
   /**

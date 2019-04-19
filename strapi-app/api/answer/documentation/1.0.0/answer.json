@@ -629,6 +629,9 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "csa": {
+                "type": "string"
               }
             }
           }

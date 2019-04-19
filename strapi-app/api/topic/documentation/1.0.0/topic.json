@@ -544,12 +544,6 @@
                 "description": {
                   "type": "string"
                 },
-                "csa": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "variations": {
                   "type": "array",
                   "items": {
@@ -657,6 +651,9 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "csa": {
+                "type": "string"
               }
             }
           },
@@ -731,6 +728,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "csa": {
+                  "type": "string"
                 }
               }
             }

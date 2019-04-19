@@ -512,8 +512,7 @@
         "required": [
           "id",
           "name",
-          "description",
-          "created_at"
+          "description"
         ],
         "properties": {
           "id": {
@@ -542,12 +541,6 @@
               },
               "description": {
                 "type": "string"
-              },
-              "csa": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
               },
               "variations": {
                 "type": "array",
@@ -632,24 +625,60 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "csa": {
+                "type": "string"
               }
             }
           },
-          "created_at": {
-            "type": "string",
-            "default": ""
-          },
-          "updated_at": {
-            "type": "string",
-            "default": ""
+          "csas": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "description"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "localPoint": {
+                  "type": "string"
+                },
+                "comissions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "users": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "variations": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
           }
         }
       },
       "NewVariation": {
         "required": [
           "name",
-          "description",
-          "created_at"
+          "description"
         ],
         "properties": {
           "name": {
@@ -666,13 +695,11 @@
           "user": {
             "type": "string"
           },
-          "created_at": {
-            "type": "string",
-            "default": ""
-          },
-          "updated_at": {
-            "type": "string",
-            "default": ""
+          "csas": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       }

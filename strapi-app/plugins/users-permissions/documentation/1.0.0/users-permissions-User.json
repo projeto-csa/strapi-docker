@@ -1176,8 +1176,7 @@
               "required": [
                 "id",
                 "name",
-                "description",
-                "created_at"
+                "description"
               ],
               "properties": {
                 "id": {
@@ -1195,11 +1194,11 @@
                 "user": {
                   "type": "string"
                 },
-                "created_at": {
-                  "type": "string"
-                },
-                "updated_at": {
-                  "type": "string"
+                "csas": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -1225,6 +1224,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "description": {
+                  "type": "string"
                 }
               }
             }
@@ -1335,6 +1337,45 @@
                 }
               }
             }
+          },
+          "csa": {
+            "required": [
+              "id",
+              "name",
+              "description"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "localPoint": {
+                "type": "string"
+              },
+              "comissions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "users": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "variations": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -1410,6 +1451,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "csa": {
+            "type": "string"
           }
         }
       }

@@ -1,6 +1,6 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "comission",
   "info": {
     "name": "comission",
     "description": ""
@@ -22,6 +22,10 @@
       "via": "comissions",
       "dominant": true,
       "plugin": "users-permissions"
+    },
+    "description": {
+      "default": "",
+      "type": "text"
     }
   }
 }
