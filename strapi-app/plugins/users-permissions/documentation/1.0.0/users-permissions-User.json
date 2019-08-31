@@ -1376,6 +1376,10 @@
                 }
               }
             }
+          },
+          "pendingJoinPermission": {
+            "type": "boolean",
+            "default": false
           }
         }
       },
@@ -1454,6 +1458,10 @@
           },
           "csa": {
             "type": "string"
+          },
+          "pendingJoinPermission": {
+            "type": "boolean",
+            "default": false
           }
         }
       }

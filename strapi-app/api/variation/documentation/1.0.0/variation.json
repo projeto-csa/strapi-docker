@@ -628,6 +628,9 @@
               },
               "csa": {
                 "type": "string"
+              },
+              "pendingJoinPermission": {
+                "type": "boolean"
               }
             }
           },

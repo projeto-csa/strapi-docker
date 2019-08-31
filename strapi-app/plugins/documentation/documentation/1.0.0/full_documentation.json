@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "04/19/2019 7:30:26 PM"
+    "x-generation-date": "04/20/2019 1:22:29 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5254,6 +5254,9 @@
               },
               "csa": {
                 "type": "string"
+              },
+              "pendingJoinPermission": {
+                "type": "boolean"
               }
             }
           }
@@ -5401,6 +5404,9 @@
                 },
                 "csa": {
                   "type": "string"
+                },
+                "pendingJoinPermission": {
+                  "type": "boolean"
                 }
               }
             }
@@ -5556,6 +5562,9 @@
                 },
                 "csa": {
                   "type": "string"
+                },
+                "pendingJoinPermission": {
+                  "type": "boolean"
                 }
               }
             }
@@ -5902,6 +5911,9 @@
               },
               "csa": {
                 "type": "string"
+              },
+              "pendingJoinPermission": {
+                "type": "boolean"
               }
             }
           },
@@ -5979,6 +5991,9 @@
                 },
                 "csa": {
                   "type": "string"
+                },
+                "pendingJoinPermission": {
+                  "type": "boolean"
                 }
               }
             }
@@ -6142,6 +6157,9 @@
               },
               "csa": {
                 "type": "string"
+              },
+              "pendingJoinPermission": {
+                "type": "boolean"
               }
             }
           },
@@ -6385,6 +6403,9 @@
                 },
                 "csa": {
                   "type": "string"
+                },
+                "pendingJoinPermission": {
+                  "type": "boolean"
                 }
               }
             }
@@ -6695,6 +6716,10 @@
                 }
               }
             }
+          },
+          "pendingJoinPermission": {
+            "type": "boolean",
+            "default": false
           }
         }
       },
@@ -6773,6 +6798,10 @@
           },
           "csa": {
             "type": "string"
+          },
+          "pendingJoinPermission": {
+            "type": "boolean",
+            "default": false
           }
         }
       },

@@ -24,10 +24,9 @@
       "via": "variations"
     },
     "user": {
-      "columnName": "user",
       "model": "user",
       "via": "variations",
-      "dominant": true,
+      "columnName": "user",
       "plugin": "users-permissions"
     },
     "csas": {

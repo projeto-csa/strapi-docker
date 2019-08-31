@@ -35,8 +35,8 @@
     },
     "interestedUsers": {
       "collection": "user",
-      "via": "interestedTopics",
       "dominant": true,
+      "via": "interestedTopics",
       "plugin": "users-permissions"
     }
   }

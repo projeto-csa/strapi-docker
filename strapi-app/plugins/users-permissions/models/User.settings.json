@@ -51,18 +51,16 @@
     },
     "firstname": {
       "default": "",
-      "type": "string",
-      "required": false
+      "type": "string"
     },
     "lastname": {
       "default": "",
-      "type": "string",
-      "required": false
+      "type": "string"
     },
     "variations": {
+      "columnName": "variations",
       "collection": "variation",
-      "via": "user",
-      "columnName": "variations"
+      "via": "user"
     },
     "comissions": {
       "collection": "comission",
@@ -83,6 +81,10 @@
     "csa": {
       "model": "csa",
       "via": "users"
+    },
+    "pendingJoinPermission": {
+      "default": false,
+      "type": "boolean"
     }
   },
   "collectionName": "users-permissions_user"

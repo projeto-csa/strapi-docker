@@ -19,8 +19,8 @@
     },
     "users": {
       "collection": "user",
-      "via": "comissions",
       "dominant": true,
+      "via": "comissions",
       "plugin": "users-permissions"
     },
     "description": {
