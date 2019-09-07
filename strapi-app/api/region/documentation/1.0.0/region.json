@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/csas": {
+    "/regions": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Csa"
+                    "$ref": "#/components/schemas/Region"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Csa"
+          "Region"
         ],
         "parameters": [
           {
@@ -195,7 +195,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Csa"
+                  "$ref": "#/components/schemas/Region"
                 }
               }
             }
@@ -233,7 +233,7 @@
         },
         "summary": "",
         "tags": [
-          "Csa"
+          "Region"
         ],
         "requestBody": {
           "description": "",
@@ -241,14 +241,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCsa"
+                "$ref": "#/components/schemas/NewRegion"
               }
             }
           }
         }
       }
     },
-    "/csas/count": {
+    "/regions/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -300,12 +300,12 @@
         },
         "summary": "",
         "tags": [
-          "Csa"
+          "Region"
         ],
         "parameters": []
       }
     },
-    "/csas/{_id}": {
+    "/regions/{_id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -315,7 +315,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Csa"
+                  "$ref": "#/components/schemas/Region"
                 }
               }
             }
@@ -353,7 +353,7 @@
         },
         "summary": "",
         "tags": [
-          "Csa"
+          "Region"
         ],
         "parameters": [
           {
@@ -377,7 +377,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Csa"
+                  "$ref": "#/components/schemas/Region"
                 }
               }
             }
@@ -415,7 +415,7 @@
         },
         "summary": "",
         "tags": [
-          "Csa"
+          "Region"
         ],
         "requestBody": {
           "description": "",
@@ -423,7 +423,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCsa"
+                "$ref": "#/components/schemas/NewRegion"
               }
             }
           }
@@ -489,7 +489,7 @@
         },
         "summary": "",
         "tags": [
-          "Csa"
+          "Region"
         ],
         "parameters": [
           {
@@ -508,206 +508,24 @@
   },
   "components": {
     "schemas": {
-      "Csa": {
+      "Region": {
         "required": [
-          "id",
-          "name",
-          "description"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "name": {
+          "regionName": {
             "type": "string",
-            "default": ""
-          },
-          "description": {
-            "type": "string",
-            "default": ""
-          },
-          "comissions": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "csa": {
-                  "type": "string"
-                },
-                "users": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "description": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "users": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "username",
-                "email"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "username": {
-                  "type": "string"
-                },
-                "email": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "password": {
-                  "type": "string"
-                },
-                "resetPasswordToken": {
-                  "type": "string"
-                },
-                "confirmed": {
-                  "type": "boolean"
-                },
-                "blocked": {
-                  "type": "boolean"
-                },
-                "role": {
-                  "type": "string"
-                },
-                "firstname": {
-                  "type": "string"
-                },
-                "lastname": {
-                  "type": "string"
-                },
-                "variations": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "comissions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "createdTopics": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "interestedTopics": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "answers": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "csa": {
-                  "type": "string"
-                },
-                "pendingJoinPermission": {
-                  "type": "boolean"
-                }
-              }
-            }
-          },
-          "variations": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "description"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "routine": {
-                  "type": "string"
-                },
-                "user": {
-                  "type": "string"
-                },
-                "csas": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "specific": {
-            "type": "json",
             "default": ""
           }
         }
       },
-      "NewCsa": {
-        "required": [
-          "name",
-          "description"
-        ],
+      "NewRegion": {
         "properties": {
-          "name": {
+          "regionName": {
             "type": "string",
-            "default": ""
-          },
-          "description": {
-            "type": "string",
-            "default": ""
-          },
-          "comissions": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "users": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "variations": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "specific": {
-            "type": "json",
             "default": ""
           }
         }
@@ -716,7 +534,7 @@
   },
   "tags": [
     {
-      "name": "Csa"
+      "name": "Region"
     }
   ]
 }

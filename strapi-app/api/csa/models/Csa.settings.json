@@ -19,10 +19,6 @@
       "type": "text",
       "required": true
     },
-    "localPoint": {
-      "default": "",
-      "type": "string"
-    },
     "comissions": {
       "collection": "comission",
       "via": "csa"
@@ -34,8 +30,12 @@
     },
     "variations": {
       "collection": "variation",
-      "dominant": true,
-      "via": "csas"
+      "via": "csas",
+      "dominant": true
+    },
+    "specific": {
+      "default": "",
+      "type": "json"
     }
   }
 }

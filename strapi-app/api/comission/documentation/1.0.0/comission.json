@@ -536,9 +536,6 @@
               "description": {
                 "type": "string"
               },
-              "localPoint": {
-                "type": "string"
-              },
               "comissions": {
                 "type": "array",
                 "items": {
@@ -556,6 +553,9 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "specific": {
+                "type": "json"
               }
             }
           },
